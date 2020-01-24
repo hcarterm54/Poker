@@ -10,7 +10,7 @@ namespace Poker.Domain.Entities
     public class Hand : IComparable<Hand>
     {
 
-
+        public List<Card> Cards { get; set; } 
         public int CompareTo(Hand other)
         {
             throw new NotImplementedException();

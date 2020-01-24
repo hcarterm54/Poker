@@ -1,6 +1,6 @@
 ﻿namespace Poker.Domain.Enums
 {
-    public enum Rank
+    public enum Face
     {
         Two = 2,
         Three,

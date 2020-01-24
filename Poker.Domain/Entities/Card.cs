@@ -3,7 +3,7 @@
 namespace Poker.Domain.Entities
 {
 
-    public class Card : SystemCard
+    public class Card
     {
         public Card(Rank rank, Suit suit)
         {
@@ -11,7 +11,7 @@ namespace Poker.Domain.Entities
             Suit = suit;
         }
 
-        public override Rank Rank { get; }
+        public Rank Rank { get; }
         public Suit Suit { get; }
     }
 }
