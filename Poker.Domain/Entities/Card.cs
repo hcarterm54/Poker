@@ -5,13 +5,13 @@ namespace Poker.Domain.Entities
 
     public class Card
     {
-        public Card(Rank rank, Suit suit)
+        public Card(Face face, Suit suit)
         {
-            Rank = rank;
+            Face = face;
             Suit = suit;
         }
 
-        public Rank Rank { get; }
+        public Face Face { get; }
         public Suit Suit { get; }
     }
 }

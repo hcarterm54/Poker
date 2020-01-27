@@ -13,6 +13,8 @@ namespace Poker.App
 
         static void Main(string[] args)
         {
+            Game game = new Game();
+
             bool exit = false;
 
             PrintCardMatrix();
@@ -26,6 +28,8 @@ namespace Poker.App
 
                 {
                     InputCards();
+                    //var winner = game.Play(leftHand, rightHand);
+                    
                 }
                 else if (x == '2')
                 {
@@ -47,15 +51,17 @@ namespace Poker.App
         }
 
         /// <summary>
-        /// To determine win, lose, or draw first evaluate each hand 
-        /// and determine rank (royal flush highest vs. high card)
-        /// 
+        /// Feed "hand" arrays to determine winner.
+        /// Get the card values into objects over which rules
+        /// can be applied including a sorting algrorithm
         /// </summary>
         private static void PickWinner()
         {
-            throw new NotImplementedException();
-        }
+            Game game = new Game();
 
+            string winner = game.Play(leftHand, rightHand);
+            Console.WriteLine("And the winner iiiisss.... " + winner + " hand!!!");
+        }
 
         /// <summary>
         /// Get input from user and store in string arrays.
